@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd ~/backup-scripts/mainserver
+
 source .env
 
 sudo -u www-data /var/www/cloud.syscy.de/occ maintenance:mode --on
