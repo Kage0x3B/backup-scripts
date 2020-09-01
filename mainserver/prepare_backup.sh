@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./.env
+source .env
 
 sudo -u www-data /var/www/cloud.syscy.de/occ maintenance:mode --on
 
