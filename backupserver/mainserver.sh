@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 function backup_mainserver() {
+	ssh vs '~/backup-scripts/update.sh'
+
 	ssh vs '~/backup-scripts/mainserver/prepare_backup.sh'
 
 	rdiff-backup vs::/var/www/syscy.de /mnt/backupdata/mainserver/syscy.de
