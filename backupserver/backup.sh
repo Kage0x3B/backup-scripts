@@ -3,9 +3,9 @@
 echo Starting backups - $(date +%d-%m-%Y)
 
 source mainserver.sh
-source apserver.sh
+#source apserver.sh
 
 backup_mainserver
-backup_apserver
+#backup_apserver
 
 echo Finished backups
