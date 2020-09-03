@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo Starting backups - $(date +%d-%m-%Y)
+echo Starting backups - $(date +%d.%m.%Y-%H:%M:%S)
 
 source mainserver.sh
 #source apserver.sh
@@ -8,4 +8,4 @@ source mainserver.sh
 backup_mainserver
 #backup_apserver
 
-echo Finished backups
+echo Finished backups - $(date +%d.%m.%Y-%H:%M:%S)
