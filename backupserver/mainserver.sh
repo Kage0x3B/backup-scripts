@@ -8,7 +8,7 @@ function backup_mainserver() {
 	ssh vs '~/backup-scripts/mainserver/prepare_backup.sh'
 
 	echo Backing up syscy.de files
-	rdiff-backup vs::/var/www/syscy.de /mnt/backupdata/mainserver/syscy.de
+	rdiff-backup -v4 vs::/var/www/syscy.de /mnt/backupdata/mainserver/syscy.de
 
 	echo Backing up NextCloud data
 	rdiff-backup vs::/var/nextclouddata /mnt/backupdata/mainserver/nextclouddata
