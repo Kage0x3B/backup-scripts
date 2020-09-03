@@ -11,13 +11,13 @@ function backup_mainserver() {
 	rdiff-backup -v4 vs::/var/www/syscy.de /mnt/backupdata/mainserver/syscy.de
 
 	echo Backing up NextCloud data
-	rdiff-backup vs::/var/nextclouddata /mnt/backupdata/mainserver/nextclouddata
+	rdiff-backup -v4 vs::/var/nextclouddata /mnt/backupdata/mainserver/nextclouddata
 
 	echo Backing up NextCloud config
-	rdiff-backup vs::/var/www/cloud.syscy.de/config /mnt/backupdata/mainserver/nextcloudconfigs
+	rdiff-backup -v4 vs::/var/www/cloud.syscy.de/config /mnt/backupdata/mainserver/nextcloudconfigs
 
 	echo Backing up databases
-	rdiff-backup vs::/home/moritz/backup/*.tar.xz /mnt/backupdata/mainserver/databasedump
+	rdiff-backup -v4 vs::/home/moritz/backup/*.tar.xz /mnt/backupdata/mainserver/databasedump
 
 	echo Finishing backup
 	ssh vs '~/backup-scripts/mainserver/finish_backup.sh'
