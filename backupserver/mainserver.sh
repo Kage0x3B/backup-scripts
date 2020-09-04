@@ -20,6 +20,6 @@ function backup_mainserver() {
 	rdiff-backup -v4 vs::/var/www/cloud.syscy.de/config /mnt/backupdata/mainserver/nextcloudconfigs
 
 	echo Finishing NextCloud backup - $(date +%d.%m.%Y-%H:%M:%S)
-	ssh vs '~/backup-scripts/mainserver/finish_backup.sh'
+	ssh vs '~/backup-scripts/mainserver/finish_nextcloud_backup.sh'
 	echo Done! - $(date +%d.%m.%Y-%H:%M:%S)
 }
