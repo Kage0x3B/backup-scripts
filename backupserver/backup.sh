@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd ~/backup-scripts/backupserver
+
 echo Starting backups - $(date +%d.%m.%Y-%H:%M:%S)
 
 source mainserver.sh
